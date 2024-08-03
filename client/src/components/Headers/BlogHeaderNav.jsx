@@ -92,7 +92,7 @@ const BlogHeaderNav = () => {
                  <div className="row justify-content-center align-items-center">
                   <div className="col-sm-12 col-md-2 col-lg-2"></div>
                   <div className="col-sm-12 col-md-8 col-lg-8">
-    <h1 className="display-4 fw-normal text-white text-body-emphasis">
+    <h1 className="display-4 fw-normal text-white text-body-emphasis pb-0 mb-0">
     <span style={{
                   fontSize: "4.5rem",
                 }}>TWO</span>  

@@ -25,10 +25,10 @@ const BlogPage = () => {
 </div>
  */} 
 <div className='container-fluid' >    
-<div className="text-center mt-4">
-<h3 className="display-6 fw-normal text-body-emphasis text-center">
-           Topics and Opions
-          </h3>
+<div className="text-center">  
+    <h1 className="display-4 fw-normal text-body-emphasis">
+    Topics and Opions
+    </h1>
           <p>
             Choosing the best cloud storage provider is difficult. This guide
             shows the 10 top cloud storage services for cost, safety and
@@ -36,7 +36,48 @@ const BlogPage = () => {
             file storage solutions.
           </p>
 </div>
-    <div className='row justify-content-center align-items-center' >
+    <div className='row justify-content-center align-items-center py-2' >
+        <div className='col-sm-12 col-md-4 col-lg-4'>
+          <div className='card'>
+            <img src={CityBG} alt='blog' className='w-100'/>
+            <div  className='card-body'>
+              <div className='card-title'>Card title</div>
+              <div className='card-text'>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='col-sm-12 col-md-4 col-lg-4'>
+          <div className='card'>
+            <img src={CityBG} alt='blog' className='w-100'/>
+            <div  className='card-body'>
+              <div className='card-title'>Card title</div>
+              <div className='card-text'>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='col-sm-12 col-md-4 col-lg-4'>
+          <div className='card'>
+            <img src={CityBG} alt='blog' className='w-100'/>
+            <div  className='card-body'>
+              <div className='card-title'>Card title</div>
+              <div className='card-text'>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div className='row justify-content-center align-items-center py-2' >
         <div className='col-sm-12 col-md-4 col-lg-4'>
           <div className='card'>
             <img src={CityBG} alt='blog' className='w-100'/>
