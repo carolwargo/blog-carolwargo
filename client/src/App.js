@@ -2,19 +2,26 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 /*Pages*/
 import HomePage from "./pages/HomePage.jsx";
+import BlogHomePage from "./pages/BlogHomePage.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
+
+import BlogHeaderNav from "./components/Headers/BlogHeaderNav.jsx";
+import BlogFooter from "./components/BlogFooter.jsx";
 import "./App.css";
 
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/blog-carolwargo">
+      <BrowserRouter>
         <ErrorBoundary>
+          <BlogHeaderNav />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/blog" element={<BlogHomePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <BlogFooter />
         </ErrorBoundary>
       </BrowserRouter>
     </div>
