@@ -3,10 +3,8 @@ import { addSubscriber, getSubscribers } from '../controllers/subscriber.control
 
 const router = express.Router();
 
-// Route to add a subscriber
-router.post('/subscribers', addSubscriber);
+router.post('/add', addSubscriber);
+router.get('/list', getSubscribers);
 
-// Route to get all subscribers (optional, for testing)
-router.get('/subscribers', getSubscribers);
+export default router; // Make sure to export the router
 
-export default router;

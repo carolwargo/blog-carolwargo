@@ -8,18 +8,20 @@ import subscriberRoutes from './routes/subscriber.route.js'
 import cookieParser from 'cookie-parser';
 import path from 'path';
 
+
 mongoose
-  .connect('mongodb://localhost:27017/carolwargo_blog', 
-    
-    { useNewUrlParser: true, 
-      useUnifiedTopology: true 
-    })
+  .connect('mongodb://localhost:27017/carolwargo_blog', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log('MongoDB is connected');
   })
   .catch((err) => {
-    console.log('Error connecting to MongoDB:', err);
+    console.error('Error connecting to MongoDB:', err);
   });
+
+
 
 const __dirname = path.resolve();
 
