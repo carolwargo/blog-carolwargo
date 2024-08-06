@@ -4,10 +4,12 @@ import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
-import subscriberRoutes from './routes/subscriber.route.js'
+import subscriberRoutes from './routes/subscriber.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 
+// Set Mongoose's strictQuery option
+mongoose.set('strictQuery', false); // You can set this to true to suppress the warning if preferred
 
 mongoose
   .connect('mongodb://localhost:27017/carolwargo_blog', {
@@ -21,8 +23,6 @@ mongoose
     console.error('Error connecting to MongoDB:', err);
   });
 
-
-
 const __dirname = path.resolve();
 
 const app = express();
@@ -30,17 +30,11 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-const port = 5000;
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}!`);
-});
-
 app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/post', postRoutes);
 app.use('/api/comment', commentRoutes);
-app.use('/api/subscriber', subscriberRoutes); 
+app.use('/api/subscriber', subscriberRoutes);
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
 
@@ -56,4 +50,10 @@ app.use((err, req, res, next) => {
     statusCode,
     message,
   });
+});
+
+const port = 5000;
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}!`);
 });
