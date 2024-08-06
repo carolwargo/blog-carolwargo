@@ -38,9 +38,7 @@ app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/post', postRoutes);
 app.use('/api/comment', commentRoutes);
-app.use('/api/subscriber', getSubscribers);
-app.use('/api/subscriber', addSubscriber);
-
+app.use('/api/subscriber', subscriberRoutes); 
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
 
