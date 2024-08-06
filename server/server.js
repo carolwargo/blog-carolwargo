@@ -8,8 +8,6 @@ import subscriberRoutes from './routes/subscriber.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 
-// Set Mongoose's strictQuery option
-mongoose.set('strictQuery', false); // You can set this to true to suppress the warning if preferred
 
 mongoose
   .connect('mongodb://localhost:27017/carolwargo_blog', {
