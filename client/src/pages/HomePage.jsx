@@ -1,13 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import CityBG from '../assets/images/CityBG.png';
-//import MeWhite from '../assets/images/MeWhite.png';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const BlogPage = () => {
+const HomePage = ({ setCurrentArticleIndex }) => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (index) => {
+    setCurrentArticleIndex(index);
+    navigate('/blog');
+  };
 
   return (
 
-<div className="blog-about" id="blog-about">
+<div className="home" id="home">
 <div className="w3-content w3-container  w3-padding-64">
   {/* 
    <div className='container-fluid' > 
@@ -29,96 +35,55 @@ const BlogPage = () => {
     <h1 className="display-4 fw-normal text-body-emphasis">
     Topics and Opions
     </h1>
-          <p>
-            Choosing the best cloud storage provider is difficult. This guide
+          <h4>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quos dolores iusto id doloribus iure? Molestiae quasi dolore, harum non quam, ea necessitatibus ad natus nulla quas ipsum dolorem laborum? Choosing the best cloud storage provider is difficult. This guide
             shows the 10 top cloud storage services for cost, safety and
             collaboration features, covering personal cloud storage and business
             file storage solutions.
-          </p>
+          </h4>
 </div>
-    <div className='row justify-content-center align-items-center py-2' >
-        <div className='col-sm-12 col-md-4 col-lg-4'>
-          <div className='card'>
-            <img src={CityBG} alt='blog' className='w-100'/>
-            <div  className='card-body'>
-              <div className='card-title'>Card title</div>
-              <div className='card-text'>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </div>
+<div className='row justify-content-center align-items-center py-2'>
+      <div className='col-sm-12 col-md-4 col-lg-4'>
+        <div className='card' onClick={() => handleCardClick(0)}>
+          <img src={CityBG} alt='blog' className='w-100'/>
+          <div className='card-body'>
+            <div className='card-title'>NAVIGATE TO ARTICLE 1</div>
+            <div className='card-text'>
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
             </div>
           </div>
         </div>
-        <div className='col-sm-12 col-md-4 col-lg-4'>
-          <div className='card'>
-            <img src={CityBG} alt='blog' className='w-100'/>
-            <div  className='card-body'>
-              <div className='card-title'>Card title</div>
-              <div className='card-text'>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </div>
+      </div>
+      <div className='col-sm-12 col-md-4 col-lg-4'>
+        <div className='card' onClick={() => handleCardClick(1)}>
+          <img src={CityBG} alt='blog' className='w-100'/>
+          <div className='card-body'>
+            <div className='card-title'>NAVIGATE TO ARTICLE 2</div>
+            <div className='card-text'>
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
             </div>
           </div>
         </div>
-        <div className='col-sm-12 col-md-4 col-lg-4'>
-          <div className='card'>
-            <img src={CityBG} alt='blog' className='w-100'/>
-            <div  className='card-body'>
-              <div className='card-title'>Card title</div>
-              <div className='card-text'>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </div>
+      </div>
+      <div className='col-sm-12 col-md-4 col-lg-4'>
+        <div className='card' onClick={() => handleCardClick(2)}>
+          <img src={CityBG} alt='blog' className='w-100'/>
+          <div className='card-body'>
+            <div className='card-title'>NAVIGATE TO ARTICLE 3</div>
+            <div className='card-text'>
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
             </div>
           </div>
         </div>
-    </div>
-    <div className='row justify-content-center align-items-center py-2' >
-        <div className='col-sm-12 col-md-4 col-lg-4'>
-          <div className='card'>
-            <img src={CityBG} alt='blog' className='w-100'/>
-            <div  className='card-body'>
-              <div className='card-title'>Card title</div>
-              <div className='card-text'>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='col-sm-12 col-md-4 col-lg-4'>
-          <div className='card'>
-            <img src={CityBG} alt='blog' className='w-100'/>
-            <div  className='card-body'>
-              <div className='card-title'>Card title</div>
-              <div className='card-text'>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='col-sm-12 col-md-4 col-lg-4'>
-          <div className='card'>
-            <img src={CityBG} alt='blog' className='w-100'/>
-            <div  className='card-body'>
-              <div className='card-title'>Card title</div>
-              <div className='card-text'>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
     </div>  
+</div>
+</div>
 </div>
 <div className="container-fluid">   
   <div className="container">
@@ -181,6 +146,6 @@ const BlogPage = () => {
 )
 }
 
-export default BlogPage;
+export default HomePage;
 
 

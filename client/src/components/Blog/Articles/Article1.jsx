@@ -4,7 +4,7 @@ import Algo from '../../../assets/images/Posts/Algos.jpeg';
 const Article1 = () => {
 
     return (
-      <div>
+        <div className='article1' id='article1'>
            <style>
                 {`
                 .blog-post p {
@@ -12,6 +12,7 @@ const Article1 = () => {
                 }
                 `}
             </style>
+            
             <article className="blog-post text-black">
                 <img src={Algo} alt="algorithm" className='w-100 w3-margin-bottom shadow-lg rounded' />
                 <h2 className="display-4 link-body-emphasis my-4"><b>Understanding Algorithms</b></h2>
@@ -20,10 +21,9 @@ const Article1 = () => {
                 <p>Algorithms are at the heart of computer science. They are a set of instructions or rules designed to perform a specific task or solve a particular problem.</p>
                 <hr/>
                 <p>Algorithms can range from simple, such as sorting a list of numbers, to highly complex, such as those used in artificial intelligence and machine learning. Understanding algorithms is crucial for anyone interested in computer science, software development, and related fields.</p>
-                <h2>Blockquotes</h2>
-                <p>Here’s a famous quote about algorithms:</p>
+             
                 <blockquote className="blockquote">
-                    <p>"Algorithms + Data Structures = Programs." - Niklaus Wirth</p>
+                    <h4><i>"Algorithms + Data Structures = Programs."</i> <span style={{fontSize:'14px'}}>- Niklaus Wirth</span></h4>
                 </blockquote>
                 <p>Algorithms are not only used in computing but also in everyday tasks like cooking recipes, solving puzzles, and following a series of steps to complete a task efficiently.</p>
                 <h3>Common Algorithms</h3>

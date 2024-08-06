@@ -1,10 +1,16 @@
 import React from "react";
 import HomeBG from "../../assets/images/HomeBig.png";
 import SubscribeModal from "../Modal/SubscribeModal";
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink } from "react-scroll";
+import { PiKeyReturnFill } from "react-icons/pi";
+/*
+<div className="collapse navbar-collapse" id="navbarSupportedContent">
+<a className="navbar-brand fw-light" 
+href="https://carolwargo.github.io/react-portfolio">
+<PiKeyReturnFill className="text-info shadow" style={{fontSize:'2.5rem'}}/> <span style={{fontSize:'14px'}} className=" text-white"> return</span></a>
+</div>*/
 
 const BlogHeaderNav = () => {
-
   return (
     <div
       className="shadow"
@@ -40,91 +46,116 @@ const BlogHeaderNav = () => {
         </symbol>
       </svg>
 
-        <header>
-            {/* Navbar */}
-  <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow-2">
-    {/* Container wrapper */}
-    <div className="container-fluid">
-      {/* Toggle button */}
-      <button className="navbar-toggler" type="button" data-mdb-collapse-init
-        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i className="fas fa-bars"></i>
-      </button>
+      <header>
+        {/* Navbar */}
+        <nav className="navbar navbar-expand-lg shadow-2">
+          {/* Container wrapper */}
+          <div className="container-fluid">
+            {/* Toggle button */}
+            <ul>
+              <li>
+                <a
+                  className="navbar-toggler"
+                  data-mdb-collapse-init
+                  data-mdb-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                    href="https://carolwargo.github.io/react-portfolio"
+                  >
+                    <PiKeyReturnFill
+                      className="text-info shadow"
+                      style={{ fontSize: "2.5rem" }}
+                    />
+                    <span style={{ fontSize: "14px" }} className=" text-white">
+                  
+                      return
+                    </span>
+                </a>
+              </li>
+            </ul>
 
-      {/* Collapsible wrapper */}
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          {/* Logo */}
-          <a className="navbar-brand me-2 d-none d-lg-inline-block" href="/"><i
-              className="fas fa-globe-europe text-primary"></i></a>
-
-          <li className="nav-item fw-bold">
-            <a className="nav-link" href="#!">Start here</a>
-          </li>
-          {/** */}
-          <li className="nav-item">
-            <a className="nav-link" href="#!">Articles</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#!">eBooks</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#!">About me</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#!">Newsletter</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#!">Contact</a>
-          </li>
-        </ul>
-
-
-      </div>
-      <SubscribeModal/>
-    </div>
-    {/* Container wrapper */}
-  </nav>
-  <div className="container">
-            <div className="mb-4 pb-md-4 mx-auto text-center w3-padding-64">
-            <div className="w3-container w3-content ">           
-                 <div className="row justify-content-center align-items-center">
-                  <div className="col-sm-12 col-md-2 col-lg-2"></div>
-                  <div className="col-sm-12 col-md-8 col-lg-8">
-    <h1 className="display-4 fw-normal text-white text-body-emphasis pb-0 mb-0">
-    <span style={{
-                  fontSize: "4.5rem",
-                }}>TWO</span>  
-                <span style={{ fontSize: "4.5rem",  fontFamily:'Dancing Script'}}>Faced</span>
-              </h1>
-                <h2 className="text-white ">
-             <i className="fw-light" style={{ color: "#FDC5E8", fontSize: "3.5rem" }}> Design & Development </i> 
-                </h2>
-    <p className="fs-5 text-body-secondary text-white ">
-     The dual nature of technology! Join us as we navigate the exciting and ever-evolving landscape of design and development, showcasing the two faces of technology that shape our digital world.
-    </p>
-    <div className="p-2">
-                 
-                 <ScrollLink to="email-graphics" smooth={true} duration={500}>
-                     <button type="button" className="btn btn-light mx-2 w3-round-xlarge">
-                         <b style={{ textShadow: "2px 2px 4px #F63DB0",}}>Get Started</b>
-                     </button>
-                 </ScrollLink>
-                                
-                                </div>
-    </div>
-                  <div className="col-sm-12 col-md-2 col-lg-2"></div>
-                 </div>
-  </div>
+            {/* Collapsible wrapper */}
+            <SubscribeModal />
+          </div>
+          {/* Container wrapper */}
+        </nav>
+        <div className="container">
+          <div className="mb-4 pb-md-4 mx-auto text-center w3-padding-64">
+            <div className="w3-container w3-content ">
+              <div className="row justify-content-center align-items-center">
+                <div className="col-sm-12 col-md-3 col-lg-3"></div>
+                <div className="col-sm-12 col-md-9 col-lg-9">
+                  <h1 className="display-4 fw-normal text-white text-body-emphasis pb-0 mb-0">
+                    <span
+                      style={{
+                        fontSize: "4.5rem",
+                        textShadow:
+                          "0 0 10px black, 0 0 20px black, 0 0 30px black",
+                      }}
+                    >
+                      TWO
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "4.5rem",
+                        fontFamily: "Dancing Script",
+                        textShadow:
+                          "0 0 10px black, 0 0 20px black, 0 0 30px black",
+                      }}
+                    >
+                      Faced
+                    </span>
+                  </h1>
+                  <h2 className="text-white ">
+                    <i
+                      className="fw-light"
+                      style={{
+                        color: "#FDC5E8",
+                        fontSize: "3.5rem",
+                        textShadow:
+                          "0 0 5px black, 0 0 10px black, 0 0 20px #d71377, 0 0 30px #d71377, 0 0 40px #FF69B4, 0 0 70px #FF69B4, 0 0 80px #FF69B4, 0 0 100px #FF69B4",
+                      }}
+                    >
+                      {" "}
+                      Design & Development{" "}
+                    </i>
+                  </h2>
+                  <p
+                    className="fs-5 text-body-secondary text-white w3-margin-top"
+                    style={{ textShadow: "0 0 2px black, 0 0 4px black" }}
+                  >
+                    The dual nature of technology! Join us as we navigate the
+                    exciting and ever-evolving landscape of design and
+                    development, showcasing the two faces of technology that
+                    shape our digital world.
+                  </p>
+                  <div className="p-2">
+                    <ScrollLink
+                      to="email-graphics"
+                      smooth={true}
+                      duration={500}
+                    >
+                      <button
+                        type="button"
+                        className="btn btn-light m-2 w3-round-xlarge"
+                      >
+                        <b
+                          style={{ textShadow: "2px 2px 4px #F63DB0" }}
+                          className="fw-bold"
+                        >
+                          Get Started
+                        </b>
+                      </button>
+                    </ScrollLink>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-      
-        </header>
-    
-
-          </div>
- 
+        </div>
+      </header>
+    </div>
   );
 };
 

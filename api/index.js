@@ -1,22 +1,24 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
+import Subscriber from './models/subscriber.model.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 
-dotenv.config();
-
 mongoose
-  .connect(process.env.MONGO)
+  .connect('mongodb://localhost:27017/carolwargo_blog', 
+    
+    { useNewUrlParser: true, 
+      useUnifiedTopology: true 
+    })
   .then(() => {
-    console.log('MongoDb is connected');
+    console.log('MongoDB is connected');
   })
   .catch((err) => {
-    console.log(err);
+    console.log('Error connecting to MongoDB:', err);
   });
 
 const __dirname = path.resolve();
@@ -26,7 +28,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-const port = process.env.PORT || 3000;
+const port = 4000;
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}!`);
@@ -36,6 +38,7 @@ app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/post', postRoutes);
 app.use('/api/comment', commentRoutes);
+app.use('/api/subscribe', addSubscriber);
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
 

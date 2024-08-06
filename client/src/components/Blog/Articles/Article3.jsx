@@ -1,9 +1,10 @@
 import React from 'react';
+import Algo from '../../../assets/images/Posts/Algos.jpeg';
 
 const Article3 = () => {
 
     return (
-     <div> 
+      <div className='article3' id='article3'>
         <style>
                 {`
                 .blog-post p {
@@ -12,6 +13,7 @@ const Article3 = () => {
                 `}
             </style>
 <article className="blog-post">
+<img src={Algo} alt="algorithm" className='w-100 w3-margin-bottom shadow-lg rounded' />
 <h2 className="display-4 link-body-emphasis my-4"><b>Article 3</b></h2>
   <p className="blog-post-meta">December 14, 2020 by 
     <a href="/">Chris</a></p>

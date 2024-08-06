@@ -5,7 +5,7 @@ import Article3 from '../components/Blog/Articles/Article3';
 import Algo from '../assets/images/Posts/Algos.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const BlogArticlesPage = () => {
+const BlogPage = () => {
   const [currentArticleIndex, setCurrentArticleIndex] = useState(0);
   const articleRef = useRef(null);
 
@@ -40,6 +40,7 @@ const BlogArticlesPage = () => {
   
   return (
     <div className='w3-padding-64'
+    
     style={{ 
       backgroundImage: 'linear-gradient(#cce6e6, white,  #e6f2f2,  #cce6e6, white, #e6f2f2)'}}>
      
@@ -82,8 +83,20 @@ const BlogArticlesPage = () => {
           />
         </symbol>
       </svg>
-
-      <main className="container w3-margin-top">
+      <div className='container w3-margin-top w3-padding-16'>    
+<div className="text-center">  
+    <h1 className="display-4 fw-normal text-body-emphasis">
+    Topics and Opions
+    </h1>
+    <h4>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quos dolores iusto id doloribus iure? Molestiae quasi dolore, harum non quam, ea necessitatibus ad natus nulla quas ipsum dolorem laborum? Choosing the best cloud storage provider is difficult. This guide
+            shows the 10 top cloud storage services for cost, safety and
+            collaboration features, covering personal cloud storage and business
+            file storage solutions.
+          </h4>
+</div>
+    </div>  
+      <main className="container w3-margin-top w3-padding-16">
         <div className="row g-5">
           <div className="col-md-8 w3-margin-top">
             {/* Pagination */}
@@ -91,8 +104,8 @@ const BlogArticlesPage = () => {
             <div className="container-fluid d-flex flex-column align-items-center">
         
         {/* Render selected article */}
-        <div className='article-render'>
-        <div className="w-100 w3-padding-top-32" ref={articleRef}>
+        <div className='article-render w3-padding-48'>
+        <div className="w-100 w3-padding-48" ref={articleRef}>
           {articles[currentArticleIndex].component}
         </div>
  </div>
@@ -120,7 +133,7 @@ const BlogArticlesPage = () => {
             </div>
           </div>
           {/**Article rendering container */}
-          <div className="col-md-4 w3-margin-top">
+          <div className="col-md-4 w3-margin-top w3-padding-top-48">
             <div className="position-sticky w3-padding-large w3-white" style={{ top: '2rem' }}>
              {/** 
               <div className="p-2 mb-3 bg-body-tertiary rounded">
@@ -234,4 +247,4 @@ const BlogArticlesPage = () => {
   );
 };
 
-export default BlogArticlesPage;
+export default BlogPage;
