@@ -9,3 +9,15 @@ export const getSubscribers = async (req, res, next) => {
     next(error);
   }
 };
+
+export const addSubscriber = async (req, res, next) => {
+  try {
+    const { name, email } = req.body;
+    const newSubscriber = new Subscriber({ name, email });
+    const savedSubscriber = await newSubscriber.save();
+    res.status(201).json(savedSubscriber);
+  } catch (error) {
+    next(error);
+  }
+};
+
